@@ -1,37 +1,9 @@
 :root {
-  color-scheme: light;
-  --bg: #f6f7f4;
-  --surface: #ffffff;
-  --text: #1a1f16;
-  --muted: #5c6658;
-  --border: #e2e6df;
-  --brand: #58cc02;
-  --link: #1cb0f6;
-  --max: 44rem;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-  background: var(--bg);
-  color: var(--text);
-  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
-  line-height: 1.6;
-}
-
-a {
-  color: var(--link);
-}
-
-.wrap {
-  max-width: var(--max);
-  margin: 0 auto;
-  padding: 1.5rem 1.25rem 3rem;
+  --pico-primary: #58cc02;
+  --pico-primary-background: #58cc02;
+  --pico-primary-underline: rgba(88, 204, 2, 0.5);
+  --pico-primary-hover: #46a302;
+  --pico-primary-hover-background: #46a302;
 }
 
 .site-header {
@@ -39,101 +11,30 @@ a {
   align-items: baseline;
   justify-content: space-between;
   gap: 1rem;
+  flex-wrap: wrap;
   margin-bottom: 1.5rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--pico-muted-border-color, #e2e6df);
 }
 
 .brand {
   font-weight: 700;
-  font-size: 1.125rem;
-  color: var(--text);
   text-decoration: none;
+  color: inherit;
 }
 
 .brand span {
-  color: var(--brand);
+  color: var(--pico-primary);
 }
 
 .nav {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem 1rem;
-  font-size: 0.9rem;
-}
-
-.card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 1.5rem 1.25rem;
-}
-
-h1 {
-  margin: 0 0 0.5rem;
-  font-size: 1.75rem;
-  line-height: 1.25;
-}
-
-h2 {
-  margin: 2rem 0 0.75rem;
-  font-size: 1.25rem;
-}
-
-h3 {
-  margin: 1.5rem 0 0.5rem;
-  font-size: 1.05rem;
-}
-
-p,
-li {
-  color: var(--text);
-}
-
-.meta,
-.muted {
-  color: var(--muted);
-  font-size: 0.95rem;
 }
 
 .meta p {
   margin: 0.25rem 0;
-}
-
-hr {
-  border: 0;
-  border-top: 1px solid var(--border);
-  margin: 2rem 0;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1rem 0;
-  font-size: 0.95rem;
-}
-
-th,
-td {
-  border: 1px solid var(--border);
-  padding: 0.55rem 0.65rem;
-  text-align: left;
-  vertical-align: top;
-}
-
-th {
-  background: #f0f3ec;
-}
-
-ul,
-ol {
-  padding-left: 1.25rem;
-}
-
-.footer {
-  margin-top: 2rem;
-  color: var(--muted);
-  font-size: 0.875rem;
 }
 
 .list-links {
@@ -153,4 +54,10 @@ ol {
 
 .list-links a:hover {
   text-decoration: underline;
+}
+
+.footer {
+  margin-top: 2rem;
+  color: var(--pico-muted-color, #5c6658);
+  font-size: 0.875rem;
 }
