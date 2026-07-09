@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nutrition Sources — Luko</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <header class="site-header">
+        <a class="brand" href="./">Luko <span>Legal</span></a>
+        <nav class="nav">
+          <a href="privacy-policy.html">Privacy</a>
+          <a href="terms-of-use.html">Terms</a>
+          <a href="nutrition-sources.html">Nutrition Sources</a>
+        </nav>
+      </header>
+      <article class="card">
+        <h1>Nutrition Sources</h1>
+        <p><strong>How Luko gets the numbers</strong></p>
+        <p>
+          Luko uses established nutrition science for your daily plan, and
+          AI-assisted estimates when you log meals. Numbers are estimates to help
+          you build awareness — not medical advice. For health conditions,
+          pregnancy, or clinical diets, talk with a qualified clinician.
+        </p>
+
+        <hr />
+
+        <h2>1. Your daily calorie budget</h2>
+        <p>
+          Your target is personalized from the profile you set in onboarding (and
+          can adjust in Settings): age, sex, height, weight, activity, and goal.
+        </p>
+
+        <h3>Resting energy (BMR)</h3>
+        <p>
+          We estimate basal metabolic rate with the Mifflin–St Jeor equation:
+        </p>
+        <ul>
+          <li>
+            Men: BMR = 10×weight(kg) + 6.25×height(cm) − 5×age + 5
+          </li>
+          <li>
+            Women: BMR = 10×weight(kg) + 6.25×height(cm) − 5×age − 161
+          </li>
+        </ul>
+        <p class="muted">
+          Source: Mifflin MD, St Jeor ST, et al. A new predictive equation for
+          resting energy expenditure in healthy individuals. Am J Clin Nutr.
+          1990;51(2):241–247.
+        </p>
+
+        <h3>Daily energy need (TDEE)</h3>
+        <p>
+          BMR is multiplied by an activity factor (same family as common
+          Harris–Benedict / FAO-style multipliers):
+        </p>
+        <table>
+          <thead>
+            <tr>
+              <th>Activity (as asked in Luko)</th>
+              <th>Multiplier</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Little / sedentary (default)</td>
+              <td>1.2</td>
+            </tr>
+            <tr>
+              <td>2–3× per week</td>
+              <td>1.375</td>
+            </tr>
+            <tr>
+              <td>4–5× per week</td>
+              <td>1.55</td>
+            </tr>
+            <tr>
+              <td>6–7× per week</td>
+              <td>1.725</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="muted">
+          Background: Harris JA, Benedict FG. A Biometric Study of Human Basal
+          Metabolism. Proc Natl Acad Sci USA. 1918;4(12):370–373. Modern activity
+          factors are widely used adaptations of that tradition (e.g.
+          FAO/WHO/UNU energy requirement frameworks).
+        </p>
+
+        <h3>Goal adjustment</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Goal</th>
+              <th>Calorie adjustment vs estimated maintenance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Lose weight</td>
+              <td>~20% below TDEE (×0.8)</td>
+            </tr>
+            <tr>
+              <td>Maintain</td>
+              <td>TDEE (×1.0)</td>
+            </tr>
+            <tr>
+              <td>Gain / build muscle</td>
+              <td>~10% above TDEE (×1.1)</td>
+            </tr>
+            <tr>
+              <td>General health (default)</td>
+              <td>TDEE (×1.0)</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Moderate deficits/surpluses are preferred over extreme cuts. Rapid loss
+          is harder to sustain and more likely to reduce lean mass.
+        </p>
+        <p class="muted">
+          Related reading: Hall KD, et al. Quantification of the effect of energy
+          imbalance on bodyweight. Lancet. 2011;378(9793):826–837. Dietary
+          Guidelines for Americans (current edition) — healthy adult calorie
+          ranges and sustainable weight management.
+        </p>
+
+        <h3>Safety floors</h3>
+        <p>We never set a target below:</p>
+        <ul>
+          <li>the higher of ~80% of BMR, or</li>
+          <li>1,200 kcal/day (women) / 1,500 kcal/day (men)</li>
+        </ul>
+        <p>
+          Very low intakes raise deficiency risk. Settings copy already notes a
+          general adult range of about 1,600–3,000 kcal/day.
+        </p>
+        <p class="muted">
+          Background: Institute of Medicine / National Academies guidance on
+          energy and nutrient adequacy; clinical practice commonly uses similar
+          minimums for unsupervised adult plans.
+        </p>
+
+        <h2>2. Macronutrients (protein, carbs, fat)</h2>
+        <h3>Energy from macros (Atwater factors)</h3>
+        <p>When we convert between grams and calories:</p>
+        <ul>
+          <li>Protein ≈ 4 kcal/g</li>
+          <li>Carbohydrate ≈ 4 kcal/g</li>
+          <li>Fat ≈ 9 kcal/g</li>
+        </ul>
+        <p class="muted">
+          Source: Atwater WO. Principles of Nutrition and Nutritive Value of
+          Food. USDA Farmers’ Bulletin No. 142 (and later USDA adaptations).
+          Still the standard used on nutrition labels in many countries.
+        </p>
+
+        <h3>How Luko builds the split</h3>
+        <ol>
+          <li>
+            Protein first — grams from body weight × a goal-based rate (g/kg),
+            then boosted slightly for higher activity, and +10% if age ≥ 65.
+          </li>
+          <li>
+            Remaining calories — split between fat and carbs (fat share of
+            remaining calories depends on goal; carbs take the rest).
+          </li>
+        </ol>
+        <p>
+          Illustrative protein rates used in-app (before activity/age boosts):
+        </p>
+        <table>
+          <thead>
+            <tr>
+              <th>Goal</th>
+              <th>Protein (g/kg body weight)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Lose weight</td>
+              <td>~2.2</td>
+            </tr>
+            <tr>
+              <td>Gain muscle</td>
+              <td>~2.0</td>
+            </tr>
+            <tr>
+              <td>Maintain</td>
+              <td>~1.8</td>
+            </tr>
+            <tr>
+              <td>General health</td>
+              <td>~1.4</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Scientific context:</p>
+        <ul>
+          <li>
+            International protein RDA is often cited near 0.8 g/kg for sedentary
+            healthy adults (IOM / WHO) — a minimum, not an optimal
+            sports/weight-loss target.
+          </li>
+          <li>
+            Higher intakes (~1.6–2.2 g/kg) are commonly studied for preserving
+            lean mass in deficit or supporting resistance training (Phillips /
+            Helms and related work).
+          </li>
+          <li>
+            Older adults often benefit from higher protein (PROT-AGE
+            recommendations).
+          </li>
+        </ul>
+        <p>
+          Fat and carb shares are chosen so the day still adds up to your calorie
+          target; they are planning defaults, not medical prescriptions. You can
+          override the % split in Settings → Macronutrients.
+        </p>
+        <p class="muted">
+          AMDR context (adult Acceptable Macronutrient Distribution Ranges,
+          IOM): roughly carbs 45–65%, fat 20–35%, protein 10–35% of energy —
+          Luko’s goal-based plans are meant to stay in a practical band within
+          that spirit, not to replace clinical dietetics.
+        </p>
+
+        <h2>3. Fiber</h2>
+        <p>Onboarding sets a default fiber target of 25 g/day.</p>
+        <p>Settings guidance (aligned with U.S. Dietary Guidelines–style ranges):</p>
+        <ul>
+          <li>Women &lt; 50: ~25–28 g</li>
+          <li>Men &lt; 50: ~31–34 g</li>
+          <li>Women ≥ 51: ~22 g</li>
+          <li>Men ≥ 51: ~28 g</li>
+        </ul>
+        <p class="muted">
+          Sources: Dietary Guidelines for Americans; Institute of Medicine
+          Adequate Intake for total fiber (~14 g per 1,000 kcal historically used
+          as a basis).
+        </p>
+
+        <h2>4. BMI (context only)</h2>
+        <p>BMI = weight(kg) / height(m)², with adult labels:</p>
+        <ul>
+          <li>&lt; 18.5 Underweight</li>
+          <li>18.5–24.9 Healthy range</li>
+          <li>≥ 25 Overweight (app uses a simplified “Overweight” band above 25)</li>
+        </ul>
+        <p class="muted">
+          Source: WHO. Obesity: preventing and managing the global epidemic / WHO
+          BMI classification for adults.
+        </p>
+        <p>
+          BMI is a population screening tool. It does not measure body fat,
+          muscle, or health by itself. Luko may show reminders for very low or
+          high target BMIs; it does not diagnose.
+        </p>
+
+        <h2>5. Weight-change pace</h2>
+        <p>Onboarding pace options map to approximate weekly change:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Pace</th>
+              <th>~kg / week</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Slow</td>
+              <td>0.25</td>
+            </tr>
+            <tr>
+              <td>Balanced</td>
+              <td>0.5</td>
+            </tr>
+            <tr>
+              <td>Speedy</td>
+              <td>0.8</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Settings currently suggests a gentler band (~0.13–0.25 kg/week) in the
+          weight-plan callout — prefer the slower end if you’re unsure.
+        </p>
+        <p class="muted">
+          Background: Many public-health programs suggest about 0.5–1 lb
+          (≈0.2–0.5 kg) per week as a sustainable loss rate; faster rates need
+          more supervision. See CDC healthy weight guidance and Dietary
+          Guidelines discussions of gradual change.
+        </p>
+        <p>
+          Goal-date estimates assume steady weekly change; real progress varies
+          with adherence, water, hormones, and measurement noise.
+        </p>
+
+        <h2>6. Meal logging: calories &amp; macros on food</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Method</th>
+              <th>How numbers are produced</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Scan (photo)</td>
+              <td>
+                Backend AI analyzes the image (food_scan) and returns estimated
+                items + calories/macros.
+              </td>
+            </tr>
+            <tr>
+              <td>Describe (text)</td>
+              <td>
+                Backend AI structures your description (food_text) into items +
+                estimates.
+              </td>
+            </tr>
+            <tr>
+              <td>Manual entry</td>
+              <td>
+                You enter calories and macros; Luko stores them as-is (no AI
+                rewrite).
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Estimates depend on what the model can see or parse: portion size,
+          preparation, sauces, and packaging all affect accuracy. You can edit
+          items and servings before confirming so daily totals stay closer to
+          what you ate.
+        </p>
+        <p>
+          Meal nutrition is AI-estimated from your photo or description, then
+          editable by you. Treat logged values as guidance for trends, not lab
+          assays.
+        </p>
+        <p class="muted">
+          Related science on estimation error: Self-reported and photo-based
+          intake often misestimates portions; editing servings improves
+          usefulness for tracking trends (see literature on dietary assessment
+          error, e.g. work by Livingstone / Subar on underreporting).
+        </p>
+
+        <h2>7. What Luko is — and isn’t</h2>
+        <ul>
+          <li>
+            <strong>Is:</strong> A planning and logging companion using published
+            energy equations, common activity factors, Atwater macro math, and AI
+            meal estimates.
+          </li>
+          <li>
+            <strong>Isn’t:</strong> A substitute for medical nutrition therapy,
+            diagnosis, or treatment.
+          </li>
+          <li>
+            <strong>Your control:</strong> You can change calorie target, macro
+            %, fiber, activity, and weight plan in Settings; you can correct any
+            meal before it counts toward the day.
+          </li>
+        </ul>
+
+        <h2>Key references (short list)</h2>
+        <ol>
+          <li>
+            Mifflin MD, St Jeor ST, et al. Am J Clin Nutr. 1990 — resting energy
+            equation.
+          </li>
+          <li>
+            Harris JA, Benedict FG. PNAS. 1918 — foundational BMR work (activity
+            multipliers are later practice).
+          </li>
+          <li>Atwater / USDA — metabolizable energy factors (4 / 4 / 9).</li>
+          <li>
+            Institute of Medicine — DRIs / AMDRs for macronutrients; fiber AI.
+          </li>
+          <li>WHO — adult BMI classification.</li>
+          <li>
+            Dietary Guidelines for Americans (current) — calorie ranges, fiber,
+            sustainable weight change.
+          </li>
+          <li>
+            Phillips / Helms / PROT-AGE — higher protein in sport, deficit, and
+            older adults.
+          </li>
+          <li>
+            Hall KD, et al. Lancet. 2011 — energy imbalance and body weight
+            dynamics.
+          </li>
+          <li>
+            USDA FoodData Central — (cite only if backend confirms use).
+          </li>
+        </ol>
+      </article>
+    </main>
+  </body>
+</html>
