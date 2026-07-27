@@ -25,7 +25,7 @@
         <h1>Privacy Policy — Luko</h1>
         <div class="meta">
           <p>Effective date: July 8, 2026</p>
-          <p>Last updated: July 8, 2026</p>
+          <p>Last updated: July 26, 2026</p>
           <p>
             Controller: Zentari Labs Inc., doing business as Luko (“we,” “us,” or
             “our”)
@@ -44,8 +44,8 @@
         <p>
           Luko is a consumer wellness app focused on food logging and personal
           nutrition targets. You can complete onboarding, set a calorie/macro
-          plan, log meals (photo, text, or voice description), and manage your
-          profile in Settings.
+          plan, log meals (photo, text, or voice description), unlock Adventure
+          companions as you log, and manage your profile in Settings.
         </p>
         <p>
           Luko is not a medical device and does not provide medical advice,
@@ -53,14 +53,14 @@
         </p>
         <p>
           This version does not include workout/fitness tracking, a daily
-          context/condition journal, AI chat coaching, Adventure/companions, or
-          paid subscriptions. If we add those later, we will update this Policy.
+          context/condition journal, AI chat coaching, or paid subscriptions. If
+          we add those later, we will update this Policy.
         </p>
 
         <h2>2. Information we collect</h2>
         <h3>A. Account &amp; identity</h3>
         <p>
-          When you create or sign in (via Auth0 and supported sign-in methods),
+          When you create or sign in (via Clerk and supported sign-in methods),
           we may collect name, email address, authentication identifiers/tokens,
           and account settings (e.g., timezone).
         </p>
@@ -78,13 +78,19 @@
           descriptions, structured meal logs, estimated calories/macros, and meal
           history.
         </p>
-        <h3>D. Device &amp; technical data</h3>
+        <h3>D. Adventure progress</h3>
+        <p>
+          Companion unlock progress, map progress, and related Adventure state
+          may be stored on your device (and, if we sync it later, on our
+          servers) so you can keep Stars / Companions as you log meals.
+        </p>
+        <h3>E. Device &amp; technical data</h3>
         <p>
           Device type, OS/app version, diagnostics needed to operate and secure
           the Service, push notification tokens (if enabled), and local
           preferences on device.
         </p>
-        <h3>E. Permissions (iOS)</h3>
+        <h3>F. Permissions (iOS)</h3>
         <table>
           <thead>
             <tr>
@@ -109,10 +115,17 @@
               <td>Notifications</td>
               <td>Optional habit reminders</td>
             </tr>
+            <tr>
+              <td>Motion</td>
+              <td>
+                Optional: make Meal tokens tumble when you tilt or shake your
+                phone
+              </td>
+            </tr>
           </tbody>
         </table>
         <p>You can change permissions in iOS Settings.</p>
-        <h3>F. Children</h3>
+        <h3>G. Children</h3>
         <p>
           We do not knowingly collect personal information from children under 13
           (or the minimum age required in your country). Contact us to request
@@ -122,10 +135,10 @@
         <h2>3. How we use information</h2>
         <p>
           We use information to provide the Service (account, plan targets, meal
-          logging, history, settings); analyze meals with AI to estimate
-          nutrition; authenticate and secure accounts; send optional push
-          reminders you opt into; improve reliability and safety; and comply with
-          law / enforce our Terms.
+          logging, Adventure progress, history, settings); analyze meals with AI
+          to estimate nutrition; authenticate and secure accounts; send optional
+          push reminders you opt into; improve reliability and safety; and comply
+          with law / enforce our Terms.
         </p>
         <p>
           We do not sell your personal information. This version does not process
@@ -142,7 +155,7 @@
 
         <h2>5. How we share information</h2>
         <p>
-          We may share information with service providers (hosting, Auth0, AI
+          We may share information with service providers (hosting, Clerk, AI
           providers, support) under contracts that limit use to serving us; Apple
           for sign-in and App Store operations; and legal/safety recipients when
           required by law or to protect rights, or in a merger/acquisition (with
@@ -185,7 +198,7 @@
         </p>
         <p>
           You can also turn off notifications, revoke camera/photos/microphone
-          access in iOS Settings, and sign out.
+          /motion access in iOS Settings, and sign out.
         </p>
 
         <h2>9. International transfers</h2>
