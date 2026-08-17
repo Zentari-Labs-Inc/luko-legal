@@ -26,7 +26,7 @@
         <h1>Privacy Policy — Luko</h1>
         <div class="meta">
           <p>Effective date: July 8, 2026</p>
-          <p>Last updated: July 26, 2026</p>
+          <p>Last updated: August 17, 2026</p>
           <p>
             Controller: Zentari Labs Inc., doing business as Luko (“we,” “us,” or
             “our”)
@@ -41,12 +41,20 @@
           “Service”).
         </p>
 
+        <p>
+          <small>
+            Previous version:
+            <a href="privacy-policy-2026-07-26.html">July 26, 2026</a>
+          </small>
+        </p>
+
         <h2>1. Who we are</h2>
         <p>
           Luko is a consumer wellness app focused on food logging and personal
           nutrition targets. You can complete onboarding, set a calorie/macro
-          plan, log meals (photo, text, or voice description), unlock Adventure
-          companions as you log, and manage your profile in Settings.
+          plan, log meals (photo, text, or voice description), see an AI note
+          after a log, generate recipe ideas, unlock Adventure companions as you
+          log, and manage your profile in Settings.
         </p>
         <p>
           Luko is not a medical device and does not provide medical advice,
@@ -54,44 +62,97 @@
         </p>
         <p>
           This version does not include workout/fitness tracking, a daily
-          context/condition journal, AI chat coaching, or paid subscriptions. If
-          we add those later, we will update this Policy.
+          context/condition journal, AI chat or voice coaching, or paid
+          subscriptions. If we add those later, we will update this Policy.
         </p>
 
         <h2>2. Information we collect</h2>
+
         <h3>A. Account &amp; identity</h3>
         <p>
           When you create or sign in (via Clerk and supported sign-in methods),
           we may collect name, email address, authentication identifiers/tokens,
-          and account settings (e.g., timezone).
+          and account settings (e.g., timezone). After onboarding, we ask you to
+          create an account so your plan and logs can be saved.
         </p>
+
         <h3>B. Profile &amp; wellness information you provide</h3>
         <p>
-          During onboarding and in settings, you may provide age/birthday, sex
-          or gender, height, weight, goals (lose/maintain/gain), activity level,
-          pace, dietary preferences, allergies, and disliked foods. This may be
+          During onboarding and in settings, you may provide age/birthday, sex,
+          height, weight, goals (lose/maintain/gain), activity level, pace,
+          dietary preferences, allergies, and disliked foods. This may be
           treated as health-related personal data under some laws. We use it to
           personalize calorie/macro targets.
         </p>
+
         <h3>C. Food-logging content</h3>
         <p>
-          Meal photos (camera or photo library), typed or voice meal
-          descriptions, structured meal logs, estimated calories/macros, and meal
-          history.
+          Meal photos (camera or photo library), typed or spoken meal
+          descriptions, structured meal logs, estimated calories/macros, meal
+          history, and optional AI follow-up text/audio about a logged meal
+          (“honest summary”).
         </p>
-        <h3>D. Adventure progress</h3>
+
+        <h3>D. Recipe ideas</h3>
+        <p>
+          If you use Plan my meals / recipe ideas, we send your request (and any
+          extra note you type) to our servers so we can return suggested meals.
+        </p>
+
+        <h3>E. Adventure progress</h3>
         <p>
           Companion unlock progress, map progress, and related Adventure state
-          may be stored on your device (and, if we sync it later, on our
-          servers) so you can keep Stars / Companions as you log meals.
+          are stored on your device in this version so you can keep Stars /
+          Companions as you log meals. If we sync Adventure later, we will update
+          this Policy.
         </p>
-        <h3>E. Device &amp; technical data</h3>
+
+        <h3>F. Device &amp; technical data</h3>
         <p>
           Device type, OS/app version, diagnostics needed to operate and secure
           the Service, push notification tokens (if enabled), and local
           preferences on device.
         </p>
-        <h3>F. Permissions (iOS)</h3>
+
+        <h3>G. Analytics (PostHog)</h3>
+        <p>
+          We send product-usage events to PostHog (for example: app opens,
+          onboarding steps, meal-log funnel, which settings were changed — not
+          their values). We also store categorical onboarding answers as PostHog
+          person properties: main goal, secondary goals, goal pace, activity
+          level, sex, and self-reported install source.
+        </p>
+        <p>
+          We do <strong>not</strong> send to analytics: your name, age, height,
+          weight, target weight, message/chat content, meal photos, or voice
+          transcripts. Session replay (screen recording) is disabled.
+        </p>
+        <p>
+          PostHog may receive a technical identifier and, by default, IP address
+          used to infer an approximate region (not precise GPS).
+        </p>
+
+        <h3>H. Advertising measurement (AppsFlyer)</h3>
+        <p>
+          AppsFlyer measures which ads or campaigns led to your install and a
+          small set of campaign events (registration completed, onboarding
+          completed). That is “tracking” under Apple’s rules: it can link data
+          from Luko with data from other companies’ apps or sites for ad
+          measurement.
+        </p>
+        <p>
+          On iOS we show Apple’s App Tracking Transparency prompt. If you allow
+          it, AppsFlyer may use the advertising identifier (IDFA). If you
+          decline, the app works the same; attribution falls back to Apple’s
+          SKAdNetwork (delayed, aggregate, no user-level IDFA). We may still set
+          an AppsFlyer customer user ID after you sign in (your account ID) for
+          attribution matching.
+        </p>
+        <p>
+          We do not show third-party ads in the app in this version.
+        </p>
+
+        <h3>I. Permissions (iOS)</h3>
         <table>
           <thead>
             <tr>
@@ -110,7 +171,14 @@
             </tr>
             <tr>
               <td>Microphone</td>
-              <td>Voice meal descriptions (if used)</td>
+              <td>
+                Voice meal descriptions (optional). Speech is on-device when the
+                device supports it; otherwise it may use Apple’s speech service
+              </td>
+            </tr>
+            <tr>
+              <td>Speech Recognition</td>
+              <td>Turn speech into a meal description you can edit before sending</td>
             </tr>
             <tr>
               <td>Notifications</td>
@@ -120,13 +188,21 @@
               <td>Motion</td>
               <td>
                 Optional: make Meal tokens tumble when you tilt or shake your
-                phone
+                phone. Motion stays on device
+              </td>
+            </tr>
+            <tr>
+              <td>Tracking</td>
+              <td>
+                Optional: measure which ads brought you to Luko (AppsFlyer).
+                Declining does not change how the app works
               </td>
             </tr>
           </tbody>
         </table>
         <p>You can change permissions in iOS Settings.</p>
-        <h3>G. Children</h3>
+
+        <h3>J. Children</h3>
         <p>
           We do not knowingly collect personal information from children under 13
           (or the minimum age required in your country). Contact us to request
@@ -134,46 +210,78 @@
         </p>
 
         <h2>3. How we use information</h2>
-        <p>
-          We use information to provide the Service (account, plan targets, meal
-          logging, Adventure progress, history, settings); analyze meals with AI
-          to estimate nutrition; authenticate and secure accounts; send optional
-          push reminders you opt into; improve reliability and safety; and comply
-          with law / enforce our Terms.
-        </p>
+        <p>We use information to:</p>
+        <ul>
+          <li>
+            provide the Service (account, plan targets, meal logging, recipe
+            ideas, Adventure progress, history, settings);
+          </li>
+          <li>
+            analyze meals with AI to estimate nutrition and, after a log,
+            generate a short spoken/text note;
+          </li>
+          <li>authenticate and secure accounts;</li>
+          <li>send optional push reminders you opt into;</li>
+          <li>understand product usage and improve reliability (PostHog);</li>
+          <li>measure advertising campaigns (AppsFlyer);</li>
+          <li>comply with law and enforce our Terms.</li>
+        </ul>
         <p>
           We do not sell your personal information. This version does not process
           payments or subscription data.
         </p>
 
-        <h2>4. AI processing (meal analysis)</h2>
+        <h2>4. AI processing</h2>
         <p>
           When you log food by photo, text, or voice, relevant content may be
           sent to our servers and/or subprocessors so we can return nutrition
-          estimates. Outputs are estimates and may be inaccurate. Do not rely on
-          them for medical decisions.
+          estimates. After you confirm a log, we may generate a short AI note
+          (text and, on iOS, spoken audio). Recipe-idea requests are also
+          processed by AI.
+        </p>
+        <p>
+          Outputs are estimates and may be inaccurate. Do not rely on them for
+          medical decisions.
         </p>
 
         <h2>5. How we share information</h2>
         <p>
-          We may share information with service providers (hosting, Clerk, AI
-          providers, support) under contracts that limit use to serving us; Apple
-          for sign-in and App Store operations; and legal/safety recipients when
-          required by law or to protect rights, or in a merger/acquisition (with
-          notice where required).
+          We may share information with:
         </p>
+        <ul>
+          <li>
+            <strong>Service providers</strong> under contracts that limit use to
+            serving us: hosting, Clerk (authentication), AI providers (meal
+            analysis, honest summary, recipe ideas), PostHog (product
+            analytics), AppsFlyer (install and campaign measurement), support;
+          </li>
+          <li>
+            <strong>Apple</strong> for Sign in, speech recognition (if used),
+            App Store operations, and SKAdNetwork attribution;
+          </li>
+          <li>
+            legal/safety recipients when required by law or to protect rights,
+            or in a merger/acquisition (with notice where required).
+          </li>
+        </ul>
         <p>
           We do not share meal photos or health profile data for third-party
-          advertising.
+          advertising. AppsFlyer receives account identifiers and campaign
+          events for ad measurement, not meal photos or body metrics.
         </p>
 
         <h2>6. Retention</h2>
         <p>
           We keep information while your account is active and as needed to
           provide the Service, resolve disputes, and meet legal obligations.
-          Delete your account in-app (Settings → Accounts) or by emailing us; we
-          will delete or anonymize personal data except where law requires
-          retention.
+          Delete your account in-app (Settings → Accounts → Delete My Account) or
+          by emailing us; we will delete or anonymize personal data except where
+          law requires retention. Analytics and attribution vendors retain data
+          under their own retention settings.
+        </p>
+        <p>
+          On-device Adventure progress is removed when you delete the app or
+          account data on the device.
         </p>
 
         <h2>7. Security</h2>
@@ -189,18 +297,21 @@
           delete, export, restrict, or object to certain processing, and to
           withdraw consent.
         </p>
-        <p>
-          Requests:
-          <a href="mailto:hu@zentarilabsinc.com">hu@zentarilabsinc.com</a>
-        </p>
-        <p>
-          Account deletion: Settings → Accounts, or email us from your account
-          email.
-        </p>
-        <p>
-          You can also turn off notifications, revoke camera/photos/microphone
-          /motion access in iOS Settings, and sign out.
-        </p>
+        <ul>
+          <li>
+            <strong>Account deletion:</strong> Settings → Accounts → Delete My
+            Account, or email us from your account email.
+          </li>
+          <li>
+            <strong>Tracking:</strong> decline Apple’s tracking prompt, or later
+            iOS Settings → Privacy &amp; Security → Tracking.
+          </li>
+          <li>
+            <strong>Notifications, camera, photos, microphone, motion:</strong>
+            iOS Settings.
+          </li>
+          <li><strong>Sign out:</strong> Settings → Accounts.</li>
+        </ul>
 
         <h2>9. International transfers</h2>
         <p>
@@ -212,8 +323,8 @@
         <h2>10. Changes</h2>
         <p>
           We may update this Policy when features or data practices change. We
-          will post a new effective date. Continued use after changes means you
-          accept the updated Policy where permitted by law.
+          will post a new last-updated date. Continued use after changes means
+          you accept the updated Policy where permitted by law.
         </p>
 
         <h2>11. Contact</h2>
