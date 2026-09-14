@@ -26,7 +26,7 @@
         <h1>Privacy Policy — Luko</h1>
         <div class="meta">
           <p>Effective date: July 8, 2026</p>
-          <p>Last updated: September 14, 2026</p>
+          <p>Last updated: September 5, 2026</p>
           <p>
             Controller: Zentari Labs Inc., doing business as Luko (“we,” “us,” or
             “our”)
@@ -44,7 +44,7 @@
         <p>
           <small>
             Previous version:
-            <a href="privacy-policy-2026-09-05.html">September 5, 2026</a>
+            <a href="privacy-policy-2026-09-02.html">September 2, 2026</a>
           </small>
         </p>
 
@@ -267,20 +267,23 @@
 
         <h3>K. Advertising measurement (AppsFlyer)</h3>
         <p>
-          We use AppsFlyer to measure advertising effectiveness through install
-          attribution and selected app interactions, including registration,
-          onboarding, meal logging and scanning, workout starts and completions,
-          return visits, and engagement milestones.
+          AppsFlyer measures which ads or campaigns led to your install and a
+          small set of campaign events (registration completed, onboarding
+          completed, and a meal logged). Meal-log events sent to AppsFlyer do
+          not include meal photos, descriptions, or nutrition values. Workout
+          session events, HealthKit data, Planet weather, and location are
+          <strong>not</strong> sent to AppsFlyer in this version. That
+          measurement is “tracking” under Apple’s rules: it can link data from
+          Luko with data from other companies’ apps or sites for ad measurement.
         </p>
         <p>
-          Events may be associated with device identifiers and, after sign-in,
-          your Luko account ID. They do not include meal photos or descriptions,
-          nutrition values, body measurements, exercise details, voice content,
-          HealthKit data, or Planet weather and location data.
-        </p>
-        <p>
-          On iOS, we request permission through Apple’s App Tracking Transparency
-          framework for tracking. Declining does not limit the app’s features.
+          On iOS we show Apple’s App Tracking Transparency prompt. If you allow
+          it, AppsFlyer may use the advertising identifier (IDFA). If you
+          decline, the app works the same; attribution falls back to Apple’s
+          SKAdNetwork (delayed, aggregate, no user-level IDFA). We may still set
+          an AppsFlyer customer user ID after you sign in (your account ID) for
+          attribution matching. SKAdNetwork postbacks may be received via our
+          measurement partner’s endpoints configured for the app.
         </p>
         <p>
           We do not show third-party ads in the app in this version.
@@ -462,11 +465,10 @@
         <p>
           We do not share meal photos, health profile data, HealthKit samples,
           body-weather details, location, or workout prescription details for
-          third-party advertising. AppsFlyer receives identifiers and selected
-          app-interaction events for advertising measurement, as described in
-          section 2.K. We do not send meal content, body measurements, detailed
-          workout records, or HealthKit data to AppsFlyer. Feedback text and any
-          email typed in the portal are
+          third-party advertising. AppsFlyer receives account identifiers and
+          campaign events (including that a meal was logged) for ad measurement,
+          not meal photos, meal descriptions, body metrics, workout logs, or
+          HealthKit data. Feedback text and any email typed in the portal are
           processed by UserJot as described in section 2.L; we do not send that
           content to PostHog or AppsFlyer.
         </p>
