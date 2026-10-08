@@ -242,9 +242,11 @@
 
         <h3>I. Device &amp; technical data</h3>
         <p>
-          Device type, OS/app version, diagnostics needed to operate and secure
-          the Service, push notification tokens (if enabled), and local
-          preferences on device.
+          Device type and model, OS/app version, device identifiers (the
+          identifier for vendor and, only if you allow tracking, the advertising
+          identifier), IP address, diagnostics needed to operate and secure the
+          Service, push notification tokens (if enabled), and local preferences
+          on device.
         </p>
 
         <h3>J. Analytics (PostHog)</h3>
@@ -272,8 +274,11 @@
           identifiers. RevenueCat reports revenue converted to US dollars. The
           events are linked to the same analytics identifier the app uses:
           anonymous before sign-in, and your Luko account after sign-in.
-          RevenueCat may also include identifiers it holds for you, such as your
-          PostHog and AppsFlyer identifiers.
+          RevenueCat may also include identifiers and device information it
+          holds for you: your PostHog and AppsFlyer identifiers, the advertising
+          identifier (IDFA) only if you allow tracking, the identifier for vendor
+          (IDFV), IP address, device model and OS version, and your App Tracking
+          Transparency choice (see section 2.O).
         </p>
         <p>
           Subscription events from the app or from RevenueCat do not include
@@ -290,7 +295,8 @@
         </p>
         <p>
           PostHog may receive a technical identifier and, by default, IP address
-          used to infer an approximate region (not precise GPS).
+          (from the app or in RevenueCat subscription events) used to infer an
+          approximate location, such as country or region (not precise GPS).
         </p>
 
         <h3>K. Advertising measurement (AppsFlyer)</h3>
@@ -307,7 +313,10 @@
           The app sends trial starts to AppsFlyer. RevenueCat sends purchases,
           trial conversions, and renewals to AppsFlyer on our behalf, server to
           server, with revenue converted to US dollars. RevenueCat does this
-          only when the app has provided an AppsFlyer identifier for you.
+          only when the app has provided an AppsFlyer identifier for you. To
+          help match these events to the ad that led to your install, RevenueCat
+          may include the advertising identifier (IDFA) only if you allow
+          tracking, the identifier for vendor (IDFV), and IP address.
           Cancellations and refunds may also be sent to AppsFlyer for
           measurement. Test (sandbox) purchases are not sent to AppsFlyer.
         </p>
@@ -445,8 +454,15 @@
         </p>
         <p>
           RevenueCat also processes the PostHog and AppsFlyer identifiers the
-          app provides. It uses them to forward the subscription events
-          described in sections 2.J and 2.K to PostHog and AppsFlyer.
+          app provides. When the app provides your AppsFlyer identifier, the
+          RevenueCat SDK also collects device information: the advertising
+          identifier (IDFA) only if you allow tracking (otherwise it is not
+          available), the identifier for vendor (IDFV), IP address, and device
+          model and OS version. RevenueCat also records your App Tracking
+          Transparency choice. To attribute and measure subscriptions,
+          RevenueCat uses this information to forward the subscription events
+          described in sections 2.J and 2.K to PostHog and AppsFlyer, and may
+          include it with those events.
         </p>
         <p>
           We do not send your meal photos, voice content, body measurements,
@@ -499,7 +515,10 @@
             understand product usage, run in-app experiments, and improve
             reliability (PostHog);
           </li>
-          <li>measure and optimize advertising campaigns (AppsFlyer);</li>
+          <li>
+            measure and optimize advertising campaigns, including attributing
+            subscriptions to campaigns (AppsFlyer, with events from RevenueCat);
+          </li>
           <li>host optional private product feedback (UserJot);</li>
           <li>comply with law and enforce our Terms.</li>
         </ul>
@@ -542,8 +561,9 @@
             analysis, honest summary, recipe ideas, workout planning / briefing),
             content delivery for exercise media, PostHog (product analytics and
             experiments), RevenueCat (subscription access, purchase records,
-            and subscription analytics), AppsFlyer (install and campaign
-            measurement), UserJot (feedback board hosting), support;
+            subscription analytics, and subscription attribution), AppsFlyer
+            (install and campaign measurement), UserJot (feedback board
+            hosting), support;
           </li>
           <li>
             <strong>Apple</strong> for Sign in, speech recognition (if used),
@@ -559,7 +579,8 @@
         <p>
           We do not share meal photos, health profile data, HealthKit samples,
           body-weather details, location, or workout prescription details for
-          third-party advertising. AppsFlyer receives identifiers, selected
+          third-party advertising. AppsFlyer receives identifiers (including
+          IDFA only if you allow tracking, IDFV, and IP address), selected
           app-interaction events, and subscription events for advertising
           measurement, and may share trial starts and subscription purchases
           with the ad network that delivered an ad, as described in section
