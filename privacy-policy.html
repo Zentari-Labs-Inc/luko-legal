@@ -26,7 +26,7 @@
         <h1>Privacy Policy — Luko</h1>
         <div class="meta">
           <p>Effective date: July 8, 2026</p>
-          <p>Last updated: October 7, 2026</p>
+          <p>Last updated: October 23, 2026</p>
           <p>
             Controller: Zentari Labs Inc., doing business as Luko (“we,” “us,” or
             “our”)
@@ -44,7 +44,7 @@
         <p>
           <small>
             Previous version:
-            <a href="privacy-policy-2026-10-02.html">October 2, 2026</a>
+            <a href="privacy-policy-2026-10-07.html">October 7, 2026</a>
           </small>
         </p>
 
@@ -57,8 +57,9 @@
           description), see an AI note after a log, generate recipe ideas, get a
           Home briefing about today’s food and workout status, train with a daily
           plan and session, grow a Planet and unlock seasonal residents as you
-          log meals or workouts, send private product feedback from Home, and
-          manage your profile in Settings. Food and workout tools also appear
+          log meals or workouts, send private product feedback from Home, play
+          optional movement games (such as Push to Fly) during limited-time
+          events, and manage your profile in Settings. Food and workout tools also appear
           under the More tab.
         </p>
         <p>
@@ -253,13 +254,17 @@
         <p>
           We send product-usage events to PostHog (for example: app opens,
           onboarding steps, meal-log funnel, workout and toolbox funnels, Home
-          briefing readiness, Planet / Adventure presentation events, which
-          settings were changed — not their values). We also store categorical
+          briefing readiness, Planet / Adventure presentation events, game
+          starts and finishes, including round score, which settings were
+          changed — not their values). We also store categorical
           onboarding answers as PostHog person properties: main goal, secondary
           goals, goal pace, activity level, sex, and self-reported install
-          source. We may use PostHog to run in-app experiments (feature flags)
-          that choose among complete product experiences; flags do not add extra
-          personal data beyond the events and properties described here.
+          source. We may use PostHog to run in-app experiments (feature flags),
+          including tests of different subscription prices or offers. We record
+          which version you were shown (for example, the experiment, variant,
+          and subscription offer and product) with the paywall events described
+          here. Your assigned price is saved on your device so it stays the
+          same. Experiments do not add other personal data.
         </p>
         <p>
           Subscription-related product events include paywall views, selected
@@ -290,7 +295,8 @@
           weight, target weight, message/chat content, meal photos, voice
           transcripts, Luko’s note free-text, workout prescription details
           (sets, reps, loads), HealthKit samples, body-weather details, location,
-          or feedback-board post text. Session replay (screen recording) is
+          feedback-board post text, or camera images or body-pose data from
+          movement games. Session replay (screen recording) is
           disabled.
         </p>
         <p>
@@ -366,11 +372,17 @@
           <tbody>
             <tr>
               <td>Camera</td>
-              <td>Scan meals</td>
+              <td>
+                Scan meals; follow your movement in on-device games (camera
+                images stay on device)
+              </td>
             </tr>
             <tr>
               <td>Photo Library</td>
-              <td>Choose meal photos</td>
+              <td>
+                Choose meal photos; save game replay videos you choose to keep
+                (add-only)
+              </td>
             </tr>
             <tr>
               <td>Microphone</td>
@@ -481,6 +493,18 @@
           Reminders do not manage or cancel your subscription.
         </p>
 
+        <h3>P. Movement games (Push to Fly)</h3>
+        <p>
+          Push to Fly uses your front camera and Apple’s on-device body-pose
+          detection to follow your push-ups. Camera images and body-pose data
+          are processed only on your device. They are not stored, and they are
+          not sent to us, analytics, advertising partners, or AI providers. When
+          you finish a round, we save your score with your Luko account to track
+          event progress and unlock rewards. A round’s replay video is made from
+          game data, with no camera images or audio. It stays on your device
+          unless you choose to share it or save it to your photo library.
+        </p>
+
         <h2>3. How we use information</h2>
         <p>We use information to:</p>
         <ul>
@@ -501,6 +525,10 @@
             grow Planet season progress from meal and workout logs, and (if you
             allow it) derive on-device Planet weather from HealthKit and daylight
             from approximate location;
+          </li>
+          <li>
+            run limited-time events, record game scores, and grant event
+            rewards;
           </li>
           <li>authenticate and secure accounts;</li>
           <li>
